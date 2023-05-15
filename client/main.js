@@ -82,20 +82,19 @@ const handleSubmit = async (e) => {
 
   // specific message div 
   const messageDiv = document.getElementById(uniqueId)
-
-  // messageDiv.innerHTML = "..."
   loader(messageDiv)
-
-  const response = await fetch('https://atr-xf0r.onrender.com', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      prompt: data.get('prompt')
+  // messageDiv.innerHTML = "..."
+  
+  
+  const response = await fetch('http://localhost:5000', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            prompt: data.get('prompt')
+        })
     })
-  })
-
   clearInterval(loadInterval)
   messageDiv.innerHTML = " "
 
