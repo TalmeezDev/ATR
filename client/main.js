@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   
   
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://atr-xf0r.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
